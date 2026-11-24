@@ -1,0 +1,382 @@
+:root {
+    --azul-oscuro: #0f1d4d;
+    --azul: #1e3a8a;
+    --azul-claro: #2563eb;
+    --acento: #f59e0b;
+    --fondo: #eef1f6;
+    --texto: #1f2937;
+    --fuente-titulos: "Space Grotesk", Arial, sans-serif;
+    --fuente-texto: "Inter", Arial, Helvetica, sans-serif;
+}
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--fuente-texto);
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--texto);
+    background-color: var(--fondo);
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3 {
+    font-family: var(--fuente-titulos);
+    line-height: 1.2;
+}
+
+h2 {
+    font-size: 1.8rem;
+    color: var(--azul);
+    margin-top: 0;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+a:link {
+    color: var(--azul-claro);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+a:visited {
+    color: #6d28d9;
+}
+
+a:hover {
+    color: var(--azul-oscuro);
+    text-decoration: underline;
+}
+
+a:active {
+    color: var(--acento);
+}
+#encabezado {
+    background-color: var(--azul-oscuro);
+    color: white;
+    padding: 0 5% 4rem;
+}
+nav ul {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.5rem 2rem;
+    padding: 1.2rem 0;
+}
+nav a:link,
+nav a:visited {
+    color: white;
+    font-weight: 500;
+    padding: 0.4rem 0.2rem;
+    border-bottom: 2px solid transparent;
+}
+
+nav a:hover {
+    color: var(--acento);
+    text-decoration: none;
+    border-bottom-color: var(--acento);
+}
+
+nav a:active {
+    color: white;
+}
+.portada {
+    position: relative;
+    max-width: 50rem;
+    margin: 3rem auto 0;
+    padding: 3rem 1.5rem;
+    text-align: center;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    border-radius: 1rem;
+    overflow: hidden;
+}
+.portada::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+        linear-gradient(90deg, rgba(255, 255, 255, 0.5) 1px, transparent 1px) 0 0 / 2rem 2rem,
+        linear-gradient(rgba(255, 255, 255, 0.5) 1px, transparent 1px) 0 0 / 2rem 2rem;
+    opacity: 0.12;
+    z-index: 1;
+}
+.portada > * {
+    position: relative;
+    z-index: 2;
+}
+
+.portada h1 {
+    font-size: 3rem;
+    margin: 0 0 1rem;
+}
+
+.portada p {
+    font-size: 1.15rem;
+    max-width: 36rem;
+    margin: 0 auto 1.5rem;
+}
+
+.boton-portada:link,
+.boton-portada:visited {
+    display: inline-block;
+    background-color: var(--acento);
+    color: var(--azul-oscuro);
+    padding: 0.8rem 1.6rem;
+    border-radius: 0.5rem;
+}
+
+.boton-portada:hover {
+    background-color: white;
+    text-decoration: none;
+}
+main {
+    max-width: 70rem;
+    margin: 0 auto;
+    padding: 1rem 0;
+}
+
+.seccion {
+    background-color: white;
+    margin: 1.5rem 5%;
+    padding: 2rem;
+    border-radius: 0.75rem;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+}
+.sobre-mi {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.sobre-mi img {
+    width: 14rem;
+    height: 14rem;
+    flex-shrink: 0;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid var(--azul);
+}
+
+.texto-sobre-mi p {
+    margin: 0 0 1rem;
+    max-width: 42rem;
+}
+.bloques {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.25rem;
+}
+
+.bloque {
+    flex: 1 1 14rem;
+    padding: 1.5rem;
+    background-color: var(--fondo);
+    border-left: 4px solid var(--azul);
+    border-radius: 0.5rem;
+}
+.bloque i {
+    font-size: 1.8rem;
+    color: var(--azul-claro);
+    margin-bottom: 0.75rem;
+}
+
+.bloque h3 {
+    margin: 0 0 0.5rem;
+    font-size: 1.2rem;
+}
+
+.bloque p {
+    margin: 0;
+}
+
+.proyecto .etiquetas {
+    margin-top: 0.75rem;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--azul);
+}
+.contenedor-tabla {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+    border-radius: 0.5rem;
+    overflow: hidden;
+}
+
+th {
+    background-color: var(--azul);
+    color: white;
+    padding: 0.9rem;
+    font-family: var(--fuente-titulos);
+}
+
+td {
+    padding: 0.8rem;
+    text-align: center;
+    border-bottom: 1px solid #d1d5db;
+}
+tr:nth-child(even) {
+    background-color: #e0e7ff;
+}
+tbody tr:nth-child(odd) {
+    background-color: white;
+}
+
+tbody tr:hover {
+    background-color: #fef3c7;
+}
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 36rem;
+    margin: 0 auto;
+}
+
+label {
+    margin-top: 0.75rem;
+    font-weight: 600;
+}
+
+input {
+    margin-top: 0.3rem;
+    padding: 0.7rem;
+    font-family: inherit;
+    font-size: 1rem;
+    border: 1px solid #9ca3af;
+    border-radius: 0.4rem;
+}
+
+input:focus {
+    outline: 2px solid var(--azul-claro);
+    border-color: var(--azul-claro);
+}
+
+button {
+    margin-top: 1.5rem;
+    padding: 0.8rem;
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: 600;
+    color: white;
+    background-color: var(--azul);
+    border: none;
+    border-radius: 0.4rem;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: var(--azul-oscuro);
+}
+footer {
+    background-color: var(--azul-oscuro);
+    color: white;
+    text-align: center;
+    padding: 1.5rem 5%;
+    margin-top: 2rem;
+}
+
+footer p {
+    margin: 0 0 0.75rem;
+}
+
+.redes {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+footer a:link,
+footer a:visited {
+    color: white;
+}
+
+footer a:hover {
+    color: var(--acento);
+}
+@media (max-width: 1080px) {
+    .portada h1 {
+        font-size: 2.5rem;
+    }
+
+    .sobre-mi img {
+        width: 12rem;
+        height: 12rem;
+    }
+}
+@media (max-width: 768px) {
+    .sobre-mi {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .seccion {
+        padding: 1.5rem;
+    }
+
+    .portada h1 {
+        font-size: 2.2rem;
+    }
+}
+@media (max-width: 480px) {
+    body {
+        font-size: 0.95rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    nav ul {
+        gap: 0.25rem 1rem;
+    }
+
+    .portada {
+        padding: 2rem 1rem;
+    }
+
+    .portada h1 {
+        font-size: 1.9rem;
+    }
+
+    .seccion {
+        margin: 1rem 3%;
+        padding: 1.25rem;
+    }
+
+    .redes {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+}
+
+/* Mobil 2 */
+@media (max-width: 375px) {
+    .portada h1 {
+        font-size: 1.6rem;
+    }
+
+    .portada p {
+        font-size: 1rem;
+    }
+
+    .sobre-mi img {
+        width: 10rem;
+        height: 10rem;
+    }
+
+    th, td {
+        padding: 0.5rem;
+        font-size: 0.85rem;
+    }
+}
+/* aclaracion, parte del css esta guiado por IA, me cuesta mucho aun buscar formas de darle un toque limpio,
+y siempre tuve problemas para combinar estilos, colores y fuentes. */

@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Julian | Portfolio de desarrollo web</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header id="encabezado">
+        <nav>
+            <ul>
+                <li><a href="#sobre-mi">Sobre mí</a></li>
+                <li><a href="#que-hago">Qué hago</a></li>
+                <li><a href="#proyectos">Proyectos</a></li>
+                <li><a href="#tecnologias">Tecnologías</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+        <div class="portada">
+            <h1>Hola, soy Julian</h1>
+            <p>Estudiante de desarrollo de software. Armo páginas web claras, rápidas y adaptables a cualquier pantalla.</p>
+            <a class="boton-portada" href="#contacto"><i class="fa-solid fa-envelope"></i> Escribime</a>
+        </div>
+    </header>
+
+    <main>
+        <section class="seccion" id="sobre-mi">
+            <h2>Sobre mí</h2>
+            <article class="sobre-mi">
+                <img src="assets/img/perfil.jpg" alt="Foto de perfil de Julian">
+
+                <div class="texto-sobre-mi">
+                    <p>
+                        Soy Julian, estudiante de desarrollo de software y me apasiona la tecnología.
+                        Me gustan las computadoras, sobre todo el mundo de los componentes, y desde que
+                        empecé a programar me enganché con el desarrollo web.
+                    </p>
+                    <p>
+                        Me interesa el desarrollo frontend, el diseño web y las nuevas tecnologías.
+                        Disfruto convertir una idea en una página que se vea bien y funcione en el celular,
+                        en la tablet y en la compu.
+                    </p>
+                    <p>
+                        Fuera del código, me gustan los videojuegos, la música y las series y películas.
+                    </p>
+                </div>
+            </article>
+        </section>
+        <section class="seccion" id="que-hago">
+            <h2>Qué hago</h2>
+            <div class="bloques">
+                <article class="bloque">
+                    <i class="fa-solid fa-code"></i>
+                    <h3>Desarrollo web</h3>
+                    <p>Maqueto sitios con HTML y CSS, y les agrego interactividad con JavaScript.</p>
+                </article>
+                <article class="bloque">
+                    <i class="fa-solid fa-mobile-screen-button"></i>
+                    <h3>Diseño responsivo</h3>
+                    <p>Uso Flexbox y media queries para que cada página se acomode a cualquier pantalla.</p>
+                </article>
+                <article class="bloque">
+                    <i class="fa-solid fa-palette"></i>
+                    <h3>Interfaces cuidadas</h3>
+                    <p>Cuido la tipografía, los colores y el espaciado para que todo sea fácil de leer.</p>
+                </article>
+                <article class="bloque">
+                    <i class="fa-solid fa-microchip"></i>
+                    <h3>Hardware de PC</h3>
+                    <p>Me gusta investigar componentes y entender cómo se combinan en una computadora.</p>
+                </article>
+            </div>
+        </section>
+        <section class="seccion" id="proyectos">
+            <h2>Proyectos</h2>
+            <div class="bloques">
+                <article class="bloque proyecto">
+                    <i class="fa-solid fa-mug-hot"></i>
+                    <h3>Del Mate Club</h3>
+                    <p>Clon de una tienda online de café, rediseñado con temática de mate. Header, footer y CSS propios.</p>
+                    <p class="etiquetas">HTML · CSS</p>
+                </article>
+                <article class="bloque proyecto">
+                    <i class="fa-solid fa-scissors"></i>
+                    <h3>Barbería: sistema de turnos</h3>
+                    <p>Proyecto en equipo con microservicios. Me tocó el servicio de turnos, con base de datos en Supabase.</p>
+                    <p class="etiquetas">API · Microservicios</p>
+                </article>
+            </div>
+        </section>
+        <section class="seccion" id="tecnologias">
+            <h2>Tecnologías e intereses</h2>
+
+            <div class="contenedor-tabla">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Tecnologías que conozco</th>
+                            <th>Tecnologías que quiero aprender</th>
+                            <th>Hobbies</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>HTML</td>
+                            <td>Dart</td>
+                            <td>Videojuegos</td>
+                        </tr>
+                        <tr>
+                            <td>CSS</td>
+                            <td>C++</td>
+                            <td>Música</td>
+                        </tr>
+                        <tr>
+                            <td>JavaScript</td>
+                            <td>UE5 Blueprints (programación con nodos)</td>
+                            <td>Series y películas</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+        <section class="seccion" id="contacto">
+            <h2>Formulario de contacto</h2>
+            <form>
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre">
+
+                <label for="apellido">Apellido:</label>
+                <input type="text" id="apellido" name="apellido">
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email">
+
+                <label for="telefono">Teléfono:</label>
+                <input type="tel" id="telefono" name="telefono">
+
+                <button type="submit"><i class="fa-solid fa-paper-plane"></i> Enviar</button>
+            </form>
+        </section>
+
+    </main>
+    <footer>
+        <p>Este fue mi humilde portfolio personal</p>
+        <!-- Reemplazá los "#" por tus links reales -->
+        <ul class="redes">
+            <li><a href="#" aria-label="GitHub"><i class="fa-brands fa-github"></i> GitHub</a></li>
+            <li><a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i> LinkedIn</a></li>
+        </ul>
+    </footer>
+
+</body>
+</html>
